@@ -1,0 +1,17 @@
+---
+on:
+  push:
+    branches:
+      - master
+
+name: Purge cache
+jobs:
+  deploy_dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: remotecompany/purge-cf-cache-action@main
+        with:
+          cf_api_key: ${{ secrets.CF_API_KEY }}
+          cf_email_addr: ${{ secrets.CF_EMAIL_ADDR }}
+          cf_zone_name: ${{ secrets.CF_ZONE_NAME }}
+          
