@@ -9,12 +9,10 @@ jobs:
   deploy_dev:
     runs-on: ubuntu-latest
     steps:
-          
-    - name: Purge cache
-      uses: 3stacks/cloudflare-purge-cache-action@1.0.1
-      with:
-        authToken: ${{ secrets.CLOUDFLARE_API_KEY }}
-        siteName: ${{ secrets.CF_ZONE_NAME }}
-        authEmail: ${{ secrets.CF_EMAIL_ADDR}}
-#        fileList: "[\"https://aorfanos.com/index.html\",\"http://somesite.com/cat-picture.jpg\"]"
 
+    - name: Purge cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      env:
+        CLOUDFLARE_EMAIL: ${{ secrets.CF_EMAIL_ADDR }}
+        CLOUDFLARE_KEY: ${{ secrets.CF_API_KEY }}
+        CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE_ID }}
