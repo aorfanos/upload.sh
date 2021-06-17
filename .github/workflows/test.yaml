@@ -13,6 +13,6 @@ jobs:
     - name: Purge cache
       uses: aorfanos/cloudflare-purge-action@master
       with:
-        cf_email_addr: ${{ secrets.CF_EMAIL_ADDR }}
+        cf_email_addr: yoohoo@ensoom.com
         cf_api_key: ${{ secrets.CF_API_KEY }}
         cf_zone_id: ${{ secrets.CF_ZONE_ID }}
