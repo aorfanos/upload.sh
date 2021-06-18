@@ -11,7 +11,7 @@ jobs:
     steps:
 
     - name: Purge cache
-      uses: aorfanos/cloudflare-purge-action@master
+      uses: aorfanos/cloudflare-purge-action@main
       with:
         cf_email_addr: ${{ secrets.CF_EMAIL_ADDR }}
         cf_api_key: ${{ secrets.CF_API_KEY }}
