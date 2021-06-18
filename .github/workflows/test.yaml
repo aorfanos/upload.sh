@@ -15,5 +15,5 @@ jobs:
       with:
         cf_email_addr: ${{ secrets.CF_EMAIL_ADDR }}
         cf_api_key: ${{ secrets.CF_API_KEY }}
-        cf_zone_id: ${{ secrets.CF_ZONE_ID }}
-        cf_purge_urls: '["https://aorfanos.com/styles.css","https://aorfanos.com/style.css"]'
+        cf_zone_name: ${{ secrets.CF_ZONE_NAME }}
+#        cf_purge_urls: '["https://aorfanos.com/styles.css","https://aorfanos.com/style.css"]'
