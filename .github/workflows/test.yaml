@@ -11,8 +11,8 @@ jobs:
     steps:
 
     - name: Purge cache
-      uses: aorfanos/cloudflare-purge-action@v1.0.0
+      uses: remotecompany/purge-cf-cache-action@v0.0.1
       env:
         CF_TOKEN: ${{ secrets.CF_TOKEN }}
         CF_ZONE_NAME: ${{ secrets.CF_ZONE_NAME }}
-        CF_PURGE_URLS: '["https://aorfanos.com/styles.css","https://aorfanos.com/style.css"]'
+
