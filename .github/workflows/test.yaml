@@ -11,7 +11,7 @@ jobs:
     steps:
 
     - name: Purge cache
-      uses: aorfanos/cloudflare-purge-action@main
+      uses: aorfanos/cloudflare-purge-action@v1.0.0
       env:
         CF_TOKEN: ${{ secrets.CF_TOKEN }}
         CF_ZONE_NAME: ${{ secrets.CF_ZONE_NAME }}
