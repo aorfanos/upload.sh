@@ -15,6 +15,6 @@ jobs:
       with:
         cf_token: ${{ secrets.CF_TOKEN }}
         cf_zone_name: ${{ secrets.CF_ZONE_NAME }}
-        cf_purge_urls: "https://aorfanos.com/style.css,https://aorfanos.com/styles.css"
+        cf_purge_hosts: "https://aorfanos.com,https://blog.aorfanos.com"
         
 
