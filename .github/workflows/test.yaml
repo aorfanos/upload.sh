@@ -11,7 +11,7 @@ jobs:
     steps:
 
     - name: Purge cache
-      uses: remotecompany/purge-cf-cache-action@golang_rewrite
+      uses: remotecompany/purge-cf-cache-action@feature/golang_rewrite
       with:
         cf_token: ${{ secrets.CF_TOKEN }}
         cf_zone_name: ${{ secrets.CF_ZONE_NAME }}
