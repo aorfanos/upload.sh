@@ -11,10 +11,10 @@ jobs:
     steps:
 
     - name: Purge cache
-      uses: remotecompany/purge-cf-cache-action@main
-      with:
-        cf_token: ${{ secrets.CF_TOKEN }}
-        cf_zone_name: ${{ secrets.CF_ZONE_NAME }}
-        cf_purge_hosts: "https://aorfanos.com,https://blog.aorfanos.com"
+      uses: aorfanos/cloudflare-purge-action@v1.0.3
+      env:
+        CF_TOKEN: ${{ secrets.CF_TOKEN }}
+        CF_ZONE_NAME: ${{ secrets.CF_ZONE_NAME }}
+        CF_PURGE_PREFIXES: "https://aorfanos.com/css,https://blog.aorfanos.com/js"
         
 
