@@ -15,6 +15,6 @@ jobs:
       env:
         CF_TOKEN: ${{ secrets.CF_TOKEN }}
         CF_ZONE_NAME: ${{ secrets.CF_ZONE_NAME }}
-        CF_PURGE_PREFIXES: "https://aorfanos.com/css,https://blog.aorfanos.com/js"
+        CF_PURGE_URLS: '["https://aorfanos.com","https://blog.aorfanos.com"]'
         
 
